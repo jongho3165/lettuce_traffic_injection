@@ -1,0 +1,83 @@
+2025-12-21 08:27:48.121 [main] INFO  com.example.redis.RedisTrafficApplication - Starting RedisTrafficApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 8506 (/home/ec2-user/lettuce/target/redis-traffic-generator-0.0.1-SNAPSHOT.jar started by root in /home/ec2-user/lettuce/target)
+2025-12-21 08:27:48.129 [main] DEBUG com.example.redis.RedisTrafficApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-12-21 08:27:48.131 [main] INFO  com.example.redis.RedisTrafficApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 08:27:49.162 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-12-21 08:27:49.165 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-12-21 08:27:49.228 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2025-12-21 08:27:50.939 [main] INFO  com.example.redis.RedisTrafficApplication - Started RedisTrafficApplication in 3.709 seconds (process running for 6.068)
+2025-12-21 08:27:50.943 [main] INFO  com.example.redis.service.TrafficGenerator - Redis 클러스터 트래픽 생성을 시작합니다.
+2025-12-21 08:27:52.350 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082750-948268:a4c57b74] (Slot 8009) -> Target Node: 13.125.220.75:6379
+2025-12-21 08:27:52.388 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082750-948268:a4c57b74
+2025-12-21 08:27:52.400 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082750-948268:a4c57b74, Value=val:20251221-082750-948268
+2025-12-21 08:27:53.406 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082753-401074:8239175a] (Slot 71) -> Target Node: 172.31.12.231:6379
+2025-12-21 08:27:53.420 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082753-401074:8239175a
+2025-12-21 08:27:53.424 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082753-401074:8239175a, Value=val:20251221-082753-401074
+2025-12-21 08:27:54.427 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082754-424718:7249447d] (Slot 6261) -> Target Node: 13.125.220.75:6379
+2025-12-21 08:27:54.432 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082754-424718:7249447d
+2025-12-21 08:27:54.434 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082754-424718:7249447d, Value=val:20251221-082754-424718
+2025-12-21 08:27:55.454 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082755-435752:c95ef23c] (Slot 12636) -> Target Node: 3.37.89.6:6379
+2025-12-21 08:27:55.459 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082755-435752:c95ef23c
+2025-12-21 08:27:55.460 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082755-435752:c95ef23c, Value=val:20251221-082755-435752
+2025-12-21 08:27:56.462 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082756-461066:c65a0eba] (Slot 2376) -> Target Node: 172.31.12.231:6379
+2025-12-21 08:27:56.464 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082756-461066:c65a0eba
+2025-12-21 08:27:56.466 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082756-461066:c65a0eba, Value=val:20251221-082756-461066
+2025-12-21 08:27:57.468 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082757-467118:112eb994] (Slot 13013) -> Target Node: 3.37.89.6:6379
+2025-12-21 08:27:57.478 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082757-467118:112eb994
+2025-12-21 08:27:57.479 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082757-467118:112eb994, Value=val:20251221-082757-467118
+2025-12-21 08:27:58.481 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082758-479965:4d2b20e2] (Slot 16113) -> Target Node: 3.37.89.6:6379
+2025-12-21 08:27:58.487 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082758-479965:4d2b20e2
+2025-12-21 08:27:58.489 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082758-479965:4d2b20e2, Value=val:20251221-082758-479965
+2025-12-21 08:27:59.491 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082759-490271:e572beea] (Slot 2444) -> Target Node: 172.31.12.231:6379
+2025-12-21 08:27:59.494 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082759-490271:e572beea
+2025-12-21 08:27:59.496 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082759-490271:e572beea, Value=val:20251221-082759-490271
+2025-12-21 08:28:00.497 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082800-497157:c5dd2d20] (Slot 4525) -> Target Node: 172.31.12.231:6379
+2025-12-21 08:28:00.501 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082800-497157:c5dd2d20
+2025-12-21 08:28:00.504 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082800-497157:c5dd2d20, Value=val:20251221-082800-497157
+2025-12-21 08:28:01.505 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082801-504409:c395c76d] (Slot 15474) -> Target Node: 3.37.89.6:6379
+2025-12-21 08:28:01.507 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082801-504409:c395c76d
+2025-12-21 08:28:01.508 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082801-504409:c395c76d, Value=val:20251221-082801-504409
+2025-12-21 08:28:02.509 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082802-509191:fb32878f] (Slot 11034) -> Target Node: 3.37.89.6:6379
+2025-12-21 08:28:02.511 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082802-509191:fb32878f
+2025-12-21 08:28:02.513 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082802-509191:fb32878f, Value=val:20251221-082802-509191
+2025-12-21 08:28:03.514 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082803-513315:bad3c0f4] (Slot 13452) -> Target Node: 3.37.89.6:6379
+2025-12-21 08:28:03.516 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082803-513315:bad3c0f4
+2025-12-21 08:28:03.519 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082803-513315:bad3c0f4, Value=val:20251221-082803-513315
+2025-12-21 08:28:04.520 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082804-520289:1e493a9e] (Slot 9877) -> Target Node: 13.125.220.75:6379
+2025-12-21 08:28:04.523 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082804-520289:1e493a9e
+2025-12-21 08:28:04.526 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082804-520289:1e493a9e, Value=val:20251221-082804-520289
+2025-12-21 08:28:05.526 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082805-526306:307ec47e] (Slot 8499) -> Target Node: 13.125.220.75:6379
+2025-12-21 08:28:05.529 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082805-526306:307ec47e
+2025-12-21 08:28:05.531 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082805-526306:307ec47e, Value=val:20251221-082805-526306
+2025-12-21 08:28:06.537 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082806-532145:c99970a0] (Slot 15338) -> Target Node: 3.37.89.6:6379
+2025-12-21 08:28:06.541 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082806-532145:c99970a0
+2025-12-21 08:28:06.542 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082806-532145:c99970a0, Value=val:20251221-082806-532145
+2025-12-21 08:28:07.544 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082807-542701:01f83c72] (Slot 10764) -> Target Node: 13.125.220.75:6379
+2025-12-21 08:28:07.546 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082807-542701:01f83c72
+2025-12-21 08:28:07.548 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082807-542701:01f83c72, Value=val:20251221-082807-542701
+2025-12-21 08:28:08.549 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082808-548415:84c53367] (Slot 5777) -> Target Node: 13.125.220.75:6379
+2025-12-21 08:28:08.551 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082808-548415:84c53367
+2025-12-21 08:28:08.553 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082808-548415:84c53367, Value=val:20251221-082808-548415
+2025-12-21 08:28:09.554 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082809-553673:35220139] (Slot 10981) -> Target Node: 3.37.89.6:6379
+2025-12-21 08:28:09.556 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082809-553673:35220139
+2025-12-21 08:28:09.557 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082809-553673:35220139, Value=val:20251221-082809-553673
+2025-12-21 08:28:10.559 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082810-558608:1ba63e01] (Slot 7534) -> Target Node: 13.125.220.75:6379
+2025-12-21 08:28:10.561 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082810-558608:1ba63e01
+2025-12-21 08:28:10.564 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082810-558608:1ba63e01, Value=val:20251221-082810-558608
+2025-12-21 08:28:11.568 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082811-564665:591bcb89] (Slot 3432) -> Target Node: 172.31.12.231:6379
+2025-12-21 08:28:11.570 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082811-564665:591bcb89
+2025-12-21 08:28:11.572 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082811-564665:591bcb89, Value=val:20251221-082811-564665
+2025-12-21 08:28:12.576 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082812-573435:9b1127ed] (Slot 3110) -> Target Node: 172.31.12.231:6379
+2025-12-21 08:28:12.579 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082812-573435:9b1127ed
+2025-12-21 08:28:12.581 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082812-573435:9b1127ed, Value=val:20251221-082812-573435
+2025-12-21 08:28:13.582 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082813-582142:d5500189] (Slot 6012) -> Target Node: 13.125.220.75:6379
+2025-12-21 08:28:13.586 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082813-582142:d5500189
+2025-12-21 08:28:13.587 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082813-582142:d5500189, Value=val:20251221-082813-582142
+2025-12-21 08:28:14.588 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082814-588128:2e74d18f] (Slot 14037) -> Target Node: 3.37.89.6:6379
+2025-12-21 08:28:14.590 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082814-588128:2e74d18f
+2025-12-21 08:28:14.591 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082814-588128:2e74d18f, Value=val:20251221-082814-588128
+2025-12-21 08:28:15.592 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082815-591898:b6ab5c76] (Slot 13471) -> Target Node: 3.37.89.6:6379
+2025-12-21 08:28:15.594 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082815-591898:b6ab5c76
+2025-12-21 08:28:15.597 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082815-591898:b6ab5c76, Value=val:20251221-082815-591898
+2025-12-21 08:28:16.599 [main] INFO  com.example.redis.service.TrafficGenerator - Key [timekey:20251221-082816-598180:bd7e6229] (Slot 11698) -> Target Node: 3.37.89.6:6379
+2025-12-21 08:28:16.600 [main] INFO  com.example.redis.service.TrafficGenerator - 키 저장 성공: Key=timekey:20251221-082816-598180:bd7e6229
+2025-12-21 08:28:16.601 [main] INFO  com.example.redis.service.TrafficGenerator - 키 조회 성공: Key=timekey:20251221-082816-598180:bd7e6229, Value=val:20251221-082816-598180
