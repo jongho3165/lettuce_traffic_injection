@@ -28,6 +28,9 @@ public class TrafficGenerator implements CommandLineRunner {
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
 
+    @org.springframework.beans.factory.annotation.Value("${traffic.interval:1000}")
+    private long interval;
+
     @Override
     public void run(String... args) throws Exception {
         logger.info("Redis 클러스터 트래픽 생성을 시작합니다.");
@@ -40,27 +43,33 @@ public class TrafficGenerator implements CommandLineRunner {
                 key = "timekey:" + timestamp + ":" + UUID.randomUUID().toString().substring(0, 8);
                 String value = "val:" + timestamp;
 
-                // 키가 저장될 노드 정보 확인 및 로깅
-                logTargetNode(key);
+                // 클러스터 노드 정보 로깅 (선택 사항)
+                logTargetNode(redisTemplate, key);
 
-                // 키 저장 (Set)
+                // 키 저장
                 redisTemplate.opsForValue().set(key, value);
                 logger.info("키 저장 성공: Key={}", key);
 
-                // 키 조회 (Get)
+                // 키 조회
                 String retrievedValue = redisTemplate.opsForValue().get(key);
                 logger.info("키 조회 성공: Key={}, Value={}", key, retrievedValue);
 
-                // 너무 빠른 루프 방지 (1초 대기)
-                TimeUnit.SECONDS.sleep(1);
+                try {
+                    TimeUnit.MILLISECONDS.sleep(interval);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                }
 
             } catch (Exception e) {
                 logger.error("Redis 작업 실패! Key={}", key);
                 logger.error("에러 메시지: {}", e.getMessage());
-                // 상세 스택 트레이스는 필요 시 주석 해제
-                // logger.error("Stack Trace:", e);
+                logger.error("Stack Trace:", e);
                 
-                TimeUnit.SECONDS.sleep(1);
+                try {
+                    TimeUnit.MILLISECONDS.sleep(interval);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                }
             }
         }
     }
@@ -68,24 +77,20 @@ public class TrafficGenerator implements CommandLineRunner {
     /**
      * 키가 저장될 슬롯을 계산하고, 해당 슬롯을 담당하는 노드(Master)를 찾아 로깅합니다.
      */
-    private void logTargetNode(String key) {
+    private void logTargetNode(RedisTemplate<String, String> template, String key) {
         try {
-            RedisConnectionFactory factory = redisTemplate.getConnectionFactory();
+            RedisConnectionFactory factory = template.getConnectionFactory();
             if (factory != null) {
                 RedisConnection connection = factory.getConnection();
                 try {
                     if (connection instanceof RedisClusterConnection) {
                         RedisClusterConnection clusterConnection = (RedisClusterConnection) connection;
                         
-                        // 1. 키의 슬롯 계산 (Lettuce SlotHash 사용)
                         int slot = SlotHash.getSlot(key);
-                        
-                        // 2. 슬롯을 담당하는 노드 찾기
                         Iterable<RedisClusterNode> nodes = clusterConnection.clusterGetNodes();
                         boolean nodeFound = false;
                         
                         for (RedisClusterNode node : nodes) {
-                            // 해당 노드가 마스터이고, 슬롯 범위를 포함하는지 확인
                             if (node.isMaster() && node.getSlotRange().contains(slot)) {
                                 logger.info("Key [{}] (Slot {}) -> Target Node: {}:{}", key, slot, node.getHost(), node.getPort());
                                 nodeFound = true;
@@ -94,7 +99,7 @@ public class TrafficGenerator implements CommandLineRunner {
                         }
                         
                         if (!nodeFound) {
-                            logger.warn("Key [{}] (Slot {}) -> 담당 노드를 찾을 수 없습니다. (토폴로지 갱신 필요 가능성)", key, slot);
+                            logger.warn("Key [{}] (Slot {}) -> 담당 노드를 찾을 수 없습니다.", key, slot);
                         }
                     } else {
                         logger.info("클러스터 모드가 아닙니다. 단일 노드에 저장됩니다.");
@@ -108,4 +113,3 @@ public class TrafficGenerator implements CommandLineRunner {
         }
     }
 }
-
