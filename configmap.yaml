@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: lettuce-config
+data:
+  application.properties: |
+    # === 공통 설정 ===
+    # 트래픽 생성 간격 (밀리초)
+    traffic.interval=1000
+
+    # =================================================================
+    # [마이그레이션 단계별 설정]
+    # 주석을 해제/설정하여 단계를 전환한 후 재기동하세요.
+    # =================================================================
+
+    # --- [단계 1] 기존 Redis (인증 없음, TLS 없음) ---
+    redis.cluster.nodes=
+    redis.cluster.max-redirects=3
+    redis.password=
+    redis.username=
+    redis.ssl.enabled=false
+
+    # --- [단계 2] ElastiCache (초기 상태: 인증 없음, TLS 없음) ---
+    # redis.cluster.nodes=
+    # redis.cluster.max-redirects=3
+    # redis.password=
+    # redis.username=
+    # redis.ssl.enabled=false
+
+    # --- [단계 3] ElastiCache (TLS 활성화) ---
+    # redis.cluster.nodes=
+    # redis.cluster.max-redirects=3
+    # redis.password=
+    # redis.username=
+    # redis.ssl.enabled=true
+
+    # --- [단계 4] ElastiCache (TLS + 사용자 인증) ---
+    # redis.cluster.nodes=
+    # redis.cluster.max-redirects=3
+    # redis.password=
+    # redis.username=
+    # redis.ssl.enabled=true
+
+    # (Optional) TrustStore 설정 (사설 인증서 사용 시)
+    # redis.ssl.trust-store=
+    # redis.ssl.trust-store-password=
